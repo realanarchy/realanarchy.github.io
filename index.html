@@ -103,6 +103,22 @@
         0 0 20px white,
         0 0 40px white;
     }
+    /* Mute button styling */
+    #mute-btn {
+      margin-top: 1em;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #mute-btn:hover {
+      background-color: #222;
+    }
   </style>
 </head>
 <body>
@@ -143,10 +159,13 @@
   </a>
 
   <!-- AUDIO ELEMENT -->
-  <audio id="bg-audio" autoplay muted loop>
+  <audio id="bg-audio" autoplay loop>
     <source src="https://realanarchy.github.io/selfish.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
+
+  <!-- MUTE/UNMUTE BUTTON -->
+  <button id="mute-btn">Mute Sound</button>
 
   <script>
     // Random message display
@@ -173,14 +192,24 @@
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     document.getElementById('dynamic-message').textContent = randomMessage;
 
-    // Unmute and play audio on first user interaction
-    window.addEventListener('click', function () {
-      const audio = document.getElementById('bg-audio');
-      if (audio.muted) {
-        audio.muted = false;
+    const audio = document.getElementById('bg-audio');
+    const muteBtn = document.getElementById('mute-btn');
+
+    // Try to autoplay unmuted audio
+    audio.play().catch(() => {
+      // Autoplay failed (browser blocked)
+      // Mute audio and update button text
+      audio.muted = true;
+      muteBtn.textContent = 'Unmute Sound';
+    });
+
+    muteBtn.addEventListener('click', () => {
+      audio.muted = !audio.muted;
+      muteBtn.textContent = audio.muted ? 'Unmute Sound' : 'Mute Sound';
+      if (!audio.muted) {
         audio.play();
       }
-    }, { once: true });
+    });
   </script>
 
 </body>
