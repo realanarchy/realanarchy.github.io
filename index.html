@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>True Anarchy</title>
   <style>
     body {
@@ -136,7 +138,7 @@
   />
 
   <h1 class="glow">True Anarchy</h1>
-  <p>We offer tools to enhance your game.</p>
+  <p>The Best Texture Packs For Vanilla Players.</p>
 
   <p id="dynamic-message" class="glow"></p>
 
@@ -175,7 +177,7 @@
       "give your base coords to fitmc, he will world download your base",
       "2b2tmcpe.org is the best minecraft server",
       "bylat furhunter",
-      "bye bye cityleader!",
+      "bye bye ciryleader!",
       "yan will be vice president forever.",
       "veneno is bae",
       "operation nether jam",
@@ -186,10 +188,6 @@
       "pls kit",
       "how use three horon cheet 4 sheep laptop with 3 gb ram?",
       "today paypal banned 7 of my accounts for selling canda",
-      "cosmos ez",
-     "Remove 2b2tpe please it's a waste of hardware and the hardware can be used for the people who play 2b2tbe please remove 2b2tpe.",
-     "Bro gift 50$ @everyone @here",
-     
     ];
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     document.getElementById('dynamic-message').textContent = randomMessage;
@@ -197,218 +195,10 @@
     const audio = document.getElementById('bg-audio');
     const muteBtn = document.getElementById('mute-btn');
 
+    // Try to autoplay unmuted audio
     audio.play().catch(() => {
-      audio.muted = true;
-      muteBtn.textContent = 'Unmute Sound';
-    });
-
-    muteBtn.addEventListener('click', () => {
-      audio.muted = !audio.muted;
-      muteBtn.textContent = audio.muted ? 'Unmute Sound' : 'Mute Sound';
-      if (!audio.muted) {
-        audio.play();
-      }
-    });
-  </scr<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>True Anarchy</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #0f0f0f;
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      position: relative;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
-    /* Icon in the middle */
-    .icon-center {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 20px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
-    /* Icon fixed in top-left corner */
-    .icon-corner {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      z-index: 1000;
-    }
-    h1 {
-      font-size: 3rem;
-      margin: 0 0 0.5em 0;
-    }
-    p {
-      font-size: 1.2rem;
-      margin: 0 0 1.5em 0;
-    }
-    #dynamic-message {
-      font-size: 1.2rem;
-      margin-bottom: 1.5em;
-    }
-    /* Categories */
-    .categories {
-      margin-bottom: 2em;
-      width: 100%;
-      max-width: 600px;
-    }
-    .categories h2 {
-      margin-bottom: 1em;
-      font-size: 2rem;
-      color: #fff;
-    }
-    .category-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-    }
-    .category-btn {
-      padding: 10px 18px;
-      background-color: #000;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-    .category-btn:hover {
-      background-color: #222;
-    }
-    /* Discord icon button */
-    .discord-btn {
-      display: inline-block;
-      margin-top: 1em;
-      width: 56px;
-      height: 56px;
-      cursor: pointer;
-      transition: filter 0.3s ease;
-    }
-    .discord-btn:hover {
-      filter: brightness(1.2);
-    }
-    /* White glowing text */
-    .glow {
-      color: white;
-      text-shadow:
-        0 0 5px white,
-        0 0 10px white,
-        0 0 20px white,
-        0 0 40px white;
-    }
-    /* Mute button styling */
-    #mute-btn {
-      margin-top: 1em;
-      padding: 10px 20px;
-      font-size: 1rem;
-      font-weight: 600;
-      background-color: #000;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    #mute-btn:hover {
-      background-color: #222;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Icon fixed in corner -->
-  <img
-    src="https://raw.githubusercontent.com/Garrit01/whowasyan.github.io/main/8gkBVPAAAABklEQVQDABA0bXqlmvx1AAAAAElFTkSuQmCC.png"
-    alt="Server Icon Corner"
-    class="icon-corner"
-  />
-
-  <!-- Icon in the middle -->
-  <img
-    src="https://raw.githubusercontent.com/Garrit01/whowasyan.github.io/main/8gkBVPAAAABklEQVQDABA0bXqlmvx1AAAAAElFTkSuQmCC.png"
-    alt="Server Icon Center"
-    class="icon-center"
-  />
-
-  <h1 class="glow">True Anarchy</h1>
-  <p>We offer tools to enhance your game.</p>
-
-  <p id="dynamic-message" class="glow"></p>
-
-  <div class="categories">
-    <h2 class="glow">Categories</h2>
-    <div class="category-list">
-      <a href="https://www.mediafire.com/file/k2na80pxtb93dwv/Texture+Pack.zip/file" download class="category-btn">Texture Packs</a>
-      <a href="https://www.mediafire.com/file/aynpbo815fft30a/Misc.zip/file" download class="category-btn">Misc</a>
-    </div>
-  </div>
-
-  <a href="https://discord.gg/dbn4GtHpxX" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord">
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png"
-      alt="Discord"
-      class="discord-btn"
-    />
-  </a>
-
-  <!-- AUDIO ELEMENT with a working audio URL -->
-  <audio id="bg-audio" autoplay loop>
-    <source src="https://realanarchy.github.io/selfish.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
-
-  <!-- MUTE/UNMUTE BUTTON -->
-  <button id="mute-btn">Mute Sound</button>
-
-  <script>
-    // Random message display
-    const messages = [
-      "blyat comerade!",
-      "discord.gg/dbn4GtHpxX is cool",
-      "now where could be my pipe?",
-      "2b2tmcpe lore (real not fake)",
-      "give your base coords to fitmc, he will world download your base",
-      "2b2tmcpe.org is the best minecraft server",
-      "bylat furhunter",
-      "bye bye cityleader!",
-      "yan will be vice president forever.",
-      "veneno is bae",
-      "operation nether jam",
-      "insert offensive sentence here",
-      "no russian 😂",
-      "Yokoso,Sakasama No Sekai.",
-      "THERE IS NO CORRUPTION IN 2B2TMCPE!!!!!!!!",
-      "pls kit",
-      "how use three horon cheet 4 sheep laptop with 3 gb ram?",
-      "today paypal banned 7 of my accounts for selling canda",
-      "cosmos ez",
-     "Remove 2b2tpe please it's a waste of hardware and the hardware can be used for the people who play 2b2tbe please remove 2b2tpe.",
-     "Bro gift 50$ @everyone @here",
-     
-    ];
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-    document.getElementById('dynamic-message').textContent = randomMessage;
-
-    const audio = document.getElementById('bg-audio');
-    const muteBtn = document.getElementById('mute-btn');
-
-    audio.play().catch(() => {
+      // Autoplay failed (browser blocked)
+      // Mute audio and update button text
       audio.muted = true;
       muteBtn.textContent = 'Unmute Sound';
     });
@@ -421,12 +211,6 @@
       }
     });
   </script>
-
-
-</body>
-</html>
-ipt>
-
 
 </body>
 </html>
